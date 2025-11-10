@@ -87,7 +87,7 @@ For detailed installation instructions, see [INSTALLATION.md](INSTALLATION.md).
 
 ## 🎉 Version 2.0 - Enterprise Edition
 
-**BurnToastWin is now enterprise-ready!** This release includes comprehensive improvements:
+**BurnToast Notification Studio is now enterprise-ready!** This release includes comprehensive improvements:
 
 ✅ **Dependency Injection** - Microsoft.Extensions.Hosting with proper service lifetime management  
 ✅ **Structured Logging** - Serilog with file rotation (30-day retention)  
@@ -834,12 +834,6 @@ Found a problem? Report it on our [Issue Tracker](https://github.com/hov172/Burn
   - BurntToast version (run `Get-Module BurntToast -ListAvailable`)
 
 ### 📚 Documentation
-- **[Installation Guide](INSTALLATION.md)** - Detailed setup instructions
-- **[Quick Reference](QUICK_REFERENCE.md)** - Fast lookup for common tasks
-- **[Developer Guide](docs/DeveloperGuide.md)** - Architecture and development
-- **[PowerShell CLI Guide](POWERSHELL-CLI.md)** - Command-line integration
-- **[Feature Verification](FEATURE_VERIFICATION.md)** - Complete feature mapping
-- **[Changelog](CHANGELOG.md)** - Version history and updates
 - **[BurntToast Module Docs](https://github.com/Windos/BurntToast)** - Official module documentation
 
 ### 🔧 Troubleshooting
