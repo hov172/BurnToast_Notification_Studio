@@ -4,26 +4,25 @@
 [![Windows](https://img.shields.io/badge/platform-Windows%2010%2B-0078D6.svg)](https://www.microsoft.com/windows)
 [![Installer Size](https://img.shields.io/badge/size-73.04%20MB-green.svg)](installer/output/BurnToastWin-Setup-2.1.9.exe)
 
-**Latest Release:** v2.1.9 (November 10, 2025)  
+**Latest Release:** v2.1.9 (November 10, 2025)
 **Latest Changes:** App version display in UI, improved status messages, stable module detection
 
 ---
 
-## 📑 Table of Contents
+## 📑 Table of Contents {#table-of-contents}
 
-- [Quick Install](#quick-install)
-- [System Requirements](#system-requirements)
-- [Installation Methods](#installation-methods)
-- [BurntToast Module Setup](#burnttoast-powershell-module)
-- [Verification](#installation-verification)
-- [Uninstallation](#uninstallation)
-- [Troubleshooting](#troubleshooting)
-- [Support](#support--documentation)
+* [Quick Install](#quick-install)
+* [System Requirements](#system-requirements)
+* [Installation Methods](#installation-methods)
+* [BurntToast Module Setup](#burnttoast-powershell-module)
+* [Verification](#installation-verification)
+* [Uninstallation](#uninstallation)
+* [Troubleshooting](#troubleshooting)
+* [Support](#support--documentation)
 
 ---
 
-
-## 🚀 Quick Install
+## 🚀 Quick Install {#quick-install}
 
 ### One-Minute Setup
 
@@ -35,51 +34,57 @@
 
 ---
 
-## 💻 System Requirements
+## 💻 System Requirements {#system-requirements}
 
 ### Minimum Requirements
 
-| Component | Requirement |
-|-----------|-------------|
-| **OS** | Windows 10 (Build 19041 / version 2004) or Windows 11 |
-| **Architecture** | x64 (64-bit) only |
-| **Disk Space** | 200 MB free space |
-| **Memory** | 4 GB RAM minimum |
-| **Display** | 1280x720 or higher |
-| **PowerShell** | PowerShell 5.1 or later (included with Windows) |
+| Component        | Requirement                                           |
+| ---------------- | ----------------------------------------------------- |
+| **OS**           | Windows 10 (Build 19041 / version 2004) or Windows 11 |
+| **Architecture** | x64 (64-bit) only                                     |
+| **Disk Space**   | 200 MB free space                                     |
+| **Memory**       | 4 GB RAM minimum                                      |
+| **Display**      | 1280x720 or higher                                    |
+| **PowerShell**   | PowerShell 5.1 or later (included with Windows)       |
 
 ### Prerequisites
 
 **Required:**
-- **BurntToast PowerShell Module** (v0.8.5 or later)
-  - Can be installed automatically by the installer
-  - Or install manually: `Install-Module -Name BurntToast -Scope CurrentUser`
+
+* **BurntToast PowerShell Module** (v0.8.5 or later)
+
+  * Can be installed automatically by the installer
+  * Or install manually: `Install-Module -Name BurntToast -Scope CurrentUser`
 
 **Optional:**
-- Windows Terminal (for better PowerShell experience)
+
+* Windows Terminal (for better PowerShell experience)
 
 ### Supported Platforms
 
 ✅ **Fully Supported:**
-- Windows 10 version 2004 (Build 19041) or later
-- Windows 11 (all versions)
-- Windows Server 2019 or later
+
+* Windows 10 version 2004 (Build 19041) or later
+* Windows 11 (all versions)
+* Windows Server 2019 or later
 
 ❌ **Not Supported:**
-- Windows 7 / 8 / 8.1
-- Windows 10 versions older than 2004
-- 32-bit (x86) systems
-- ARM processors (not tested)
+
+* Windows 7 / 8 / 8.1
+* Windows 10 versions older than 2004
+* 32-bit (x86) systems
+* ARM processors (not tested)
 
 ---
 
-## 📥 Installation Methods
+## 📥 Installation Methods {#installation-methods}
 
-### Method 1: Standard Installation (Recommended)
+### Method 1: Standard Installation (Recommended) {#method-1-standard-installation-recommended}
 
 **Step-by-Step:**
 
 1. **Download the Installer**
+
    ```
    File: BurnToastWin-Setup-2.1.9.exe
    Size: 73.04 MB (76,574,720 bytes)
@@ -87,46 +92,54 @@
    ```
 
 2. **Run the Installer**
-   - Double-click `BurnToastWin-Setup-2.1.9.exe`
-   - If prompted, click "Yes" to allow admin access
+
+   * Double-click `BurnToastWin-Setup-2.1.9.exe`
+   * If prompted, click "Yes" to allow admin access
 
 3. **Setup Wizard**
-   - **License Agreement:** Accept to continue
-   - **Installation Folder:** Default is `C:\Program Files\BurnToast Notification Studio`
-   - **Select Components:**
-     - ☑ **Desktop Icon** - Create shortcut on desktop
-     - ☑ **Install BurntToast Module** - Auto-install PowerShell module (recommended)
-   - **Start Menu Folder:** Default is "BurnToastWin"
+
+   * **License Agreement:** Accept to continue
+   * **Installation Folder:** Default is `C:\Program Files\BurnToast Notification Studio`
+   * **Select Components:**
+
+     * ☑ **Desktop Icon** - Create shortcut on desktop
+     * ☑ **Install BurntToast Module** - Auto-install PowerShell module (recommended)
+   * **Start Menu Folder:** Default is "BurnToastWin"
 
 4. **Installation Progress**
-   - Installing 671 files (~30 seconds)
-   - Creating shortcuts
-   - Installing BurntToast module (if selected)
+
+   * Installing 671 files (~30 seconds)
+   * Creating shortcuts
+   * Installing BurntToast module (if selected)
 
 5. **Complete**
-   - Check "Launch BurnToastWin" to start immediately
-   - Click "Finish"
+
+   * Check "Launch BurnToastWin" to start immediately
+   * Click "Finish"
 
 **What Gets Installed:**
-- ✅ Application files in `C:\Program Files\BurnToast Notification Studio\`
-- ✅ Start Menu shortcuts (launch app, documentation links, uninstaller)
-- ✅ Desktop icon (optional)
-- ✅ BurntToast PowerShell module (optional)
-- ✅ Uninstaller in `C:\Program Files\BurnToast Notification Studio\unins000.exe`
+
+* ✅ Application files in `C:\Program Files\BurnToast Notification Studio\`
+* ✅ Start Menu shortcuts (launch app, documentation links, uninstaller)
+* ✅ Desktop icon (optional)
+* ✅ BurntToast PowerShell module (optional)
+* ✅ Uninstaller in `C:\Program Files\BurnToast Notification Studio\unins000.exe`
 
 ---
 
-### Method 2: Silent Installation
+### Method 2: Silent Installation {#method-2-silent-installation}
 
 For automated deployments, scripts, or enterprise environments:
 
 **Basic Silent Install:**
+
 ```powershell
 # Completely silent with no UI
 .\BurnToastWin-Setup-2.1.9.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
 ```
 
 **Advanced Options:**
+
 ```powershell
 # Silent install with custom directory
 .\BurnToastWin-Setup-2.1.9.exe /VERYSILENT /DIR="C:\MyApps\BurnToastWin" /NORESTART
@@ -146,30 +159,33 @@ For automated deployments, scripts, or enterprise environments:
 
 **Command-Line Parameters:**
 
-| Parameter | Description | Example |
-|-----------|-------------|---------|
-| `/VERYSILENT` | Completely silent (no UI) | Required for automated deployment |
-| `/SILENT` | Silent with progress bar only | Less silent than VERYSILENT |
-| `/SUPPRESSMSGBOXES` | Suppress all message boxes | Use with /VERYSILENT |
-| `/NORESTART` | Prevent automatic restart | Recommended |
-| `/DIR="path"` | Custom installation directory | `/DIR="D:\Apps\BurnToastWin"` |
-| `/LOG="file"` | Create installation log | `/LOG="C:\Logs\install.log"` |
-| `/TASKS="tasks"` | Select tasks (comma-separated) | `/TASKS="desktopicon,installmodule"` |
-| `/TASKS="!task"` | Exclude task (prefix with `!`) | `/TASKS="!desktopicon"` |
+| Parameter           | Description                    | Example                              |
+| ------------------- | ------------------------------ | ------------------------------------ |
+| `/VERYSILENT`       | Completely silent (no UI)      | Required for automated deployment    |
+| `/SILENT`           | Silent with progress bar only  | Less silent than VERYSILENT          |
+| `/SUPPRESSMSGBOXES` | Suppress all message boxes     | Use with /VERYSILENT                 |
+| `/NORESTART`        | Prevent automatic restart      | Recommended                          |
+| `/DIR="path"`       | Custom installation directory  | `/DIR="D:\Apps\BurnToastWin"`        |
+| `/LOG="file"`       | Create installation log        | `/LOG="C:\Logs\install.log"`         |
+| `/TASKS="tasks"`    | Select tasks (comma-separated) | `/TASKS="desktopicon,installmodule"` |
+| `/TASKS="!task"`    | Exclude task (prefix with `!`) | `/TASKS="!desktopicon"`              |
 
 **Available Tasks:**
-- `desktopicon` - Create desktop shortcut
-- `installmodule` - Install BurntToast PowerShell module
+
+* `desktopicon` - Create desktop shortcut
+* `installmodule` - Install BurntToast PowerShell module
 
 **Exit Codes:**
-- `0` - Success
-- `1` - Installation cancelled by user
-- `2` - Installation failed
-- `3` - Fatal error
-- `4` - Directory access denied
-- `5` - Out of disk space
+
+* `0` - Success
+* `1` - Installation cancelled by user
+* `2` - Installation failed
+* `3` - Fatal error
+* `4` - Directory access denied
+* `5` - Out of disk space
 
 **Group Policy / SCCM Deployment:**
+
 ```powershell
 # Example SCCM installation command
 msiexec /i "BurnToastWin-Setup-2.1.9.exe" /qn /norestart /l*v "C:\Logs\BurnToastWin.log"
@@ -177,42 +193,48 @@ msiexec /i "BurnToastWin-Setup-2.1.9.exe" /qn /norestart /l*v "C:\Logs\BurnToast
 
 ---
 
-### Method 3: Portable Installation (No Installer)
+### Method 3: Portable Installation (No Installer) {#method-3-portable-installation-no-installer}
 
 If you prefer to run without installation or don't have admin rights:
 
 1. **Build or Extract Files**
-   - If building from source: `dotnet publish -c Release`
-   - Publish folder: `src\BurnToastWin.App\bin\Release\net8.0-windows10.0.19041.0\win-x64\publish\`
+
+   * If building from source: `dotnet publish -c Release`
+   * Publish folder: `src\BurnToastWin.App\bin\Release\net8.0-windows10.0.19041.0\win-x64\publish\`
 
 2. **Copy Files**
-   - Copy entire `publish` folder to your desired location
-   - Example: `D:\PortableApps\BurnToastWin\`
+
+   * Copy entire `publish` folder to your desired location
+   * Example: `D:\PortableApps\BurnToastWin\`
 
 3. **Install BurntToast Module**
+
    ```powershell
    Install-Module -Name BurntToast -Scope CurrentUser -Force
    ```
 
 4. **Run Application**
-   - Navigate to folder
-   - Double-click `BurnToastWin.exe`
+
+   * Navigate to folder
+   * Double-click `BurnToastWin.exe`
 
 **Portable Mode Notes:**
-- ✅ No admin rights required
-- ✅ Run from USB drive
-- ✅ No registry modifications
-- ⚠️ No Start Menu shortcuts
-- ⚠️ Must install BurntToast module separately
-- 📁 Logs saved to: `%LOCALAPPDATA%\BurnToastNotificationStudio\logs\`
+
+* ✅ No admin rights required
+* ✅ Run from USB drive
+* ✅ No registry modifications
+* ⚠️ No Start Menu shortcuts
+* ⚠️ Must install BurntToast module separately
+* 📁 Logs saved to: `%LOCALAPPDATA%\BurnToastNotificationStudio\logs\`
 
 ---
 
-## 🔧 BurntToast PowerShell Module
+## 🔧 BurntToast PowerShell Module {#burnttoast-powershell-module}
 
 ### Automatic Installation (Recommended)
 
 The installer can automatically install BurntToast:
+
 1. Check "Install BurntToast PowerShell module" during setup
 2. Installer will run: `Install-Module -Name BurntToast -Scope CurrentUser -Force`
 3. Module will be available immediately
@@ -222,20 +244,25 @@ The installer can automatically install BurntToast:
 If you skipped automatic installation or it failed:
 
 **Option 1: Install for Current User (Recommended)**
+
 ```powershell
 Install-Module -Name BurntToast -Scope CurrentUser -Force
 ```
-*No admin rights required. Installs to:*  
+
+*No admin rights required. Installs to:*
 `C:\Users\[YourUsername]\Documents\WindowsPowerShell\Modules\BurntToast\`
 
 **Option 2: Install for All Users (Requires Admin)**
+
 ```powershell
 Install-Module -Name BurntToast -Force
 ```
-*Requires admin. Installs to:*  
+
+*Requires admin. Installs to:*
 `C:\Program Files\WindowsPowerShell\Modules\BurntToast\`
 
 **Option 3: Install Specific Version**
+
 ```powershell
 Install-Module -Name BurntToast -RequiredVersion 1.1.0 -Scope CurrentUser -Force
 ```
@@ -250,7 +277,7 @@ Get-Module -Name BurntToast -ListAvailable
 
 # Expected output:
 #     Directory: C:\Users\[Username]\Documents\WindowsPowerShell\Modules
-# 
+#
 # ModuleType Version    Name           ExportedCommands
 # ---------- -------    ----           ----------------
 # Script     1.1.0      BurntToast     {Get-BTHistory, New-BTAction, New-BTAppId, New-BTAudio...}
@@ -268,53 +295,63 @@ New-BurntToastNotification -Text "Test", "Module is working!"
 BurnToastWin automatically searches for BurntToast in these locations:
 
 **User Modules:**
-- `%USERPROFILE%\Documents\WindowsPowerShell\Modules\BurntToast\`
-- `%USERPROFILE%\Documents\PowerShell\Modules\BurntToast\` (PowerShell 7+)
+
+* `%USERPROFILE%\Documents\WindowsPowerShell\Modules\BurntToast\`
+* `%USERPROFILE%\Documents\PowerShell\Modules\BurntToast\` (PowerShell 7+)
 
 **System Modules:**
-- `%ProgramFiles%\WindowsPowerShell\Modules\BurntToast\`
-- `%ProgramFiles%\PowerShell\Modules\BurntToast\` (PowerShell 7+)
+
+* `%ProgramFiles%\WindowsPowerShell\Modules\BurntToast\`
+* `%ProgramFiles%\PowerShell\Modules\BurntToast\` (PowerShell 7+)
 
 **Windows Modules:**
-- `%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules\BurntToast\`
+
+* `%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules\BurntToast\`
 
 If the module is in any of these locations, BurnToastWin will detect it automatically on startup (~2 seconds).
 
 ---
 
-## ✅ Installation Verification
+## ✅ Installation Verification {#installation-verification}
 
 ### Step 1: Launch the Application
 
 **Method 1: Start Menu**
-- Press Windows key
-- Type "BurnToastWin"
-- Click the app
+
+* Press Windows key
+* Type "BurnToastWin"
+* Click the app
 
 **Method 2: PowerShell**
+
 ```powershell
 Start-Process "C:\Program Files\BurnToast Notification Studio\BurnToastWin.exe"
 ```
 
 **Method 3: Desktop Shortcut**
-- Double-click the BurnToastWin icon (if created during install)
+
+* Double-click the BurnToastWin icon (if created during install)
 
 ### Step 2: Verify Module Detection
 
 When BurnToastWin launches, check the UI:
 
 **Top Command Bar:**
-- ✅ Should show: **"v2.1.9"** (app version)
+
+* ✅ Should show: **"v2.1.9"** (app version)
 
 **Status Bar (bottom):**
-- ✅ **During startup** (~2 seconds): "Loading module capabilities..."
-- ✅ **After startup**: "All modules loaded successfully."
+
+* ✅ **During startup** (~2 seconds): "Loading module capabilities..."
+* ✅ **After startup**: "All modules loaded successfully."
 
 **Module Information Panel:**
-- ✅ **Module Version**: "BurntToast v1.1.0" (or your installed version)
-- ✅ **Capabilities**: "Module capabilities loaded: 21 commands"
+
+* ✅ **Module Version**: "BurntToast v1.1.0" (or your installed version)
+* ✅ **Capabilities**: "Module capabilities loaded: 21 commands"
 
 **If module is NOT detected:**
+
 1. Check BurntToast is installed: `Get-Module BurntToast -ListAvailable`
 2. Click **"Check for Updates"** button (gives module info)
 3. Check logs: `%LOCALAPPDATA%\BurnToastNotificationStudio\logs\`
@@ -322,27 +359,34 @@ When BurnToastWin launches, check the UI:
 ### Step 3: Test Basic Notification
 
 1. **Enter text:**
-   - Title: `Test Notification`
-   - Body: `BurnToastWin is working!`
+
+   * Title: `Test Notification`
+   * Body: `BurnToastWin is working!`
 
 2. **Click "Send Notification"**
 
 3. **Verify:**
-   - ✅ Notification appears in Windows Action Center
-   - ✅ Shows title and body text
-   - ✅ No error messages in app
+
+   * ✅ Notification appears in Windows Action Center
+   * ✅ Shows title and body text
+   * ✅ No error messages in app
 
 ### Step 4: Test Command Generation
 
 1. **Configure notification** (title, body, sound, etc.)
+
 2. **Click "Generate Command"**
+
 3. **Verify:**
-   - ✅ PowerShell command appears in text box
-   - ✅ Command starts with `New-BurntToastNotification`
-   - ✅ Parameters are properly formatted
+
+   * ✅ PowerShell command appears in text box
+   * ✅ Command starts with `New-BurntToastNotification`
+   * ✅ Parameters are properly formatted
 
 4. **Click "Copy to Clipboard"**
+
 5. **Test in PowerShell:**
+
    ```powershell
    # Paste and run the generated command
    # Should show identical notification
@@ -351,29 +395,31 @@ When BurnToastWin launches, check the UI:
 ### Step 5: Check Application Version
 
 **In the app:**
-- Look at top command bar → Should show **"v2.1.9"**
+
+* Look at top command bar → Should show **"v2.1.9"**
 
 **Via file properties:**
+
 ```powershell
 (Get-Item "C:\Program Files\BurnToast Notification Studio\BurnToastWin.exe").VersionInfo
 ```
 
 ### Verification Checklist
 
-- [ ] App launches without errors
-- [ ] App version shows "v2.1.9" in UI
-- [ ] Module version detected (e.g., "BurntToast v1.1.0")
-- [ ] 21 commands detected
-- [ ] Status shows "All modules loaded successfully."
-- [ ] Test notification appears
-- [ ] Command generation works
-- [ ] Copy to clipboard works
+* [ ] App launches without errors
+* [ ] App version shows "v2.1.9" in UI
+* [ ] Module version detected (e.g., "BurntToast v1.1.0")
+* [ ] 21 commands detected
+* [ ] Status shows "All modules loaded successfully."
+* [ ] Test notification appears
+* [ ] Command generation works
+* [ ] Copy to clipboard works
 
 **If all checks pass: ✅ Installation successful!**
 
 ---
 
-## 🗑️ Uninstallation
+## 🗑️ Uninstallation {#uninstallation}
 
 ### Method 1: Via Start Menu (Easiest)
 
@@ -408,16 +454,18 @@ For automated removal or scripts:
 ### What Gets Removed
 
 **Automatically removed:**
-- ✅ Application files in `C:\Program Files\BurnToast Notification Studio\`
-- ✅ Start Menu shortcuts
-- ✅ Desktop icon (if created)
-- ✅ Uninstaller
-- ✅ Registry entries
+
+* ✅ Application files in `C:\Program Files\BurnToast Notification Studio\`
+* ✅ Start Menu shortcuts
+* ✅ Desktop icon (if created)
+* ✅ Uninstaller
+* ✅ Registry entries
 
 **NOT removed (manual cleanup if desired):**
-- ⚠️ **BurntToast PowerShell Module** - Must be removed separately
-- ⚠️ **Log files** in `%LOCALAPPDATA%\BurnToastNotificationStudio\logs\`
-- ⚠️ **User settings/preferences** (if any)
+
+* ⚠️ **BurntToast PowerShell Module** - Must be removed separately
+* ⚠️ **Log files** in `%LOCALAPPDATA%\BurnToastNotificationStudio\logs\`
+* ⚠️ **User settings/preferences** (if any)
 
 ### Remove BurntToast Module (Optional)
 
@@ -440,42 +488,50 @@ Remove-Item "$env:LOCALAPPDATA\BurnToastNotificationStudio" -Recurse -Force
 
 ---
 
-## 🔧 Troubleshooting
+## 🔧 Troubleshooting {#troubleshooting}
 
 ### Issue: "BurntToast module not found"
 
 **Symptoms:**
-- App shows "Module Version: Unknown"
-- Capabilities show "0 commands"
-- Status stuck on "Loading module capabilities..."
+
+* App shows "Module Version: Unknown"
+* Capabilities show "0 commands"
+* Status stuck on "Loading module capabilities..."
 
 **Solutions:**
 
 1. **Verify module is installed:**
+
    ```powershell
    Get-Module -Name BurntToast -ListAvailable
    ```
+
    If nothing appears, install it:
+
    ```powershell
    Install-Module -Name BurntToast -Scope CurrentUser -Force
    ```
 
 2. **Restart BurnToastWin:**
-   - Close the app completely
-   - Launch again
-   - Module detection happens automatically on startup
+
+   * Close the app completely
+   * Launch again
+   * Module detection happens automatically on startup
 
 3. **Click "Check for Updates":**
-   - This button forces a module detection check
-   - Should show module version and available commands
+
+   * This button forces a module detection check
+   * Should show module version and available commands
 
 4. **Check module location:**
+
    ```powershell
    (Get-Module BurntToast -ListAvailable).Path
    # Should show path to BurntToast.psd1
    ```
 
 5. **Check logs for errors:**
+
    ```powershell
    $logPath = "$env:LOCALAPPDATA\BurnToastNotificationStudio\logs"
    Get-ChildItem $logPath -Filter "*.log" | Sort-Object LastWriteTime -Descending | Select-Object -First 1 | Get-Content -Tail 50
@@ -486,22 +542,26 @@ Remove-Item "$env:LOCALAPPDATA\BurnToastNotificationStudio" -Recurse -Force
 ### Issue: "Installer requires administrator privileges"
 
 **Solution 1: Run as Administrator**
-- Right-click installer → **Run as administrator**
+
+* Right-click installer → **Run as administrator**
 
 **Solution 2: Use Silent Install to User Directory**
+
 ```powershell
 .\BurnToastWin-Setup-2.1.9.exe /VERYSILENT /DIR="C:\Users\$env:USERNAME\Apps\BurnToastWin" /NORESTART
 ```
 
 **Solution 3: Use Portable Installation**
-- See [Method 3: Portable Installation](#method-3-portable-installation-no-installer) above
-- No admin rights required
+
+* See [Method 3: Portable Installation](#method-3-portable-installation-no-installer) above
+* No admin rights required
 
 ---
 
 ### Issue: "Application won't start" or "Crashes on launch"
 
 **Solution 1: Check .NET Runtime**
+
 ```powershell
 # Check if .NET 8.0 is installed
 dotnet --list-runtimes | Select-String "Microsoft.WindowsDesktop.App"
@@ -511,16 +571,19 @@ dotnet --list-runtimes | Select-String "Microsoft.WindowsDesktop.App"
 ```
 
 **Solution 2: Check Windows Event Viewer**
+
 1. Press **Win + X** → **Event Viewer**
 2. Navigate to: **Windows Logs** → **Application**
 3. Look for recent errors from "BurnToastWin.exe"
 
 **Solution 3: Check Antivirus**
-- Some antivirus software blocks unsigned applications
-- Add exception for `BurnToastWin.exe`
-- Or temporarily disable antivirus and test
+
+* Some antivirus software blocks unsigned applications
+* Add exception for `BurnToastWin.exe`
+* Or temporarily disable antivirus and test
 
 **Solution 4: Check Logs**
+
 ```powershell
 # View latest log
 $logPath = "$env:LOCALAPPDATA\BurnToastNotificationStudio\logs"
@@ -528,9 +591,11 @@ Get-ChildItem $logPath -Filter "*.log" | Sort-Object LastWriteTime -Descending |
 ```
 
 **Solution 5: Run as Administrator**
-- Right-click `BurnToastWin.exe` → **Run as administrator**
+
+* Right-click `BurnToastWin.exe` → **Run as administrator**
 
 **Solution 6: Reinstall**
+
 ```powershell
 # Uninstall
 & "C:\Program Files\BurnToast Notification Studio\unins000.exe" /VERYSILENT
@@ -544,90 +609,105 @@ Get-ChildItem $logPath -Filter "*.log" | Sort-Object LastWriteTime -Descending |
 ### Issue: "Notifications not appearing"
 
 **Solution 1: Check Windows Notification Settings**
+
 1. **Settings** → **System** → **Notifications**
 2. Ensure "Get notifications from apps and other senders" is **ON**
 3. Scroll down, find "PowerShell" or "WindowsApp"
 4. Ensure notifications are **enabled**
 
 **Solution 2: Check Focus Assist**
+
 1. **Settings** → **System** → **Focus assist**
 2. Set to **Off** or **Priority only**
 3. Focus Assist suppresses notifications when enabled
 
 **Solution 3: Test with PowerShell Directly**
+
 ```powershell
 Import-Module BurntToast
 New-BurntToastNotification -Text "Direct Test", "Testing BurntToast module"
 ```
+
 If this doesn't work, issue is with BurntToast module, not BurnToastWin.
 
 **Solution 4: Check Action Center**
-- Notifications may appear in Action Center even if toast popup doesn't show
-- Press **Win + A** to open Action Center
+
+* Notifications may appear in Action Center even if toast popup doesn't show
+* Press **Win + A** to open Action Center
 
 **Solution 5: Run as Administrator**
-- Try running BurnToastWin as administrator
-- Some notification features require elevated permissions
+
+* Try running BurnToastWin as administrator
+* Some notification features require elevated permissions
 
 ---
 
 ### Issue: "Module detection slow" or "Takes long to start"
 
 **Expected Behavior:**
-- Module detection: ~2 seconds
-- Total startup time: ~3-5 seconds
+
+* Module detection: ~2 seconds
+* Total startup time: ~3-5 seconds
 
 **If slower:**
 
 1. **Check disk performance:**
-   - Module detection involves file I/O
-   - Slow disk = slower detection
+
+   * Module detection involves file I/O
+   * Slow disk = slower detection
 
 2. **Check PowerShell performance:**
+
    ```powershell
    Measure-Command { Get-Module BurntToast -ListAvailable }
    # Should be under 1 second
    ```
 
 3. **Disable antivirus real-time scanning for:**
-   - `C:\Program Files\BurnToast Notification Studio\`
-   - PowerShell module paths
+
+   * `C:\Program Files\BurnToast Notification Studio\`
+   * PowerShell module paths
 
 ---
 
 ### Issue: "Generated commands don't work"
 
 **Solution 1: Verify BurntToast Version**
+
 ```powershell
 (Get-Module BurntToast -ListAvailable).Version
 # Should be 0.8.5 or later (tested with 1.1.0)
 ```
 
 **Solution 2: Check for Special Characters**
-- Single quotes in text are escaped: `don't` → `don''t`
-- This is correct PowerShell syntax
+
+* Single quotes in text are escaped: `don't` → `don''t`
+* This is correct PowerShell syntax
 
 **Solution 3: Test Command in PowerShell**
-- Copy generated command
-- Paste into PowerShell
-- Check for errors
-- Report error message if command fails
+
+* Copy generated command
+* Paste into PowerShell
+* Check for errors
+* Report error message if command fails
 
 ---
 
-## 📚 Support & Documentation
+## 📚 Support & Documentation {#support--documentation}
 
 ### Documentation Files
 
-- **[README.md](README.md)** - Overview, features, and quick start
+* **[README.md](README.md)** - Overview, features, and quick start
 
 ### Get Help
 
 **GitHub Issues:**
-- Report bugs: [Issues](https://github.com/hov172/BurnToast_Notification_Studio/issues)
-- Request features: [Issues](https://github.com/hov172/BurnToast_Notification_Studio/issues)
+
+* Report bugs: [Issues](https://github.com/hov172/BurnToast_Notification_Studio/issues)
+* Request features: [Issues](https://github.com/hov172/BurnToast_Notification_Studio/issues)
 
 **When reporting issues, include:**
+
 1. BurnToastWin version (shown in app: v2.1.9)
 2. Windows version (run `winver`)
 3. BurntToast module version (run `Get-Module BurntToast -ListAvailable`)
@@ -636,16 +716,18 @@ If this doesn't work, issue is with BurntToast module, not BurnToastWin.
 6. Log files from `%LOCALAPPDATA%\BurnToastNotificationStudio\logs\`
 
 **BurntToast Module Documentation:**
-- Official repo: https://github.com/Windos/BurntToast
-- Module help: `Get-Help New-BurntToastNotification -Full`
+
+* Official repo: [https://github.com/Windos/BurntToast](https://github.com/Windos/BurntToast)
+* Module help: `Get-Help New-BurntToastNotification -Full`
 
 ---
 
-## 📋 What's Installed
+## 📋 What's Installed {#whats-installed}
 
 ### Installation Details
 
 **Installer Information:**
+
 ```
 File: BurnToastWin-Setup-2.1.9.exe
 Size: 73.04 MB (76,574,720 bytes)
@@ -657,6 +739,7 @@ Files: 671 files + dependencies
 **Installation Locations:**
 
 **Program Files:**
+
 ```
 C:\Program Files\BurnToast Notification Studio\
 ├── BurnToastWin.exe             (Main executable)
@@ -669,6 +752,7 @@ C:\Program Files\BurnToast Notification Studio\
 ```
 
 **Start Menu:**
+
 ```
 Start Menu\Programs\BurnToastWin\
 ├── BurnToastWin.lnk
@@ -680,11 +764,13 @@ Start Menu\Programs\BurnToastWin\
 ```
 
 **Desktop (Optional):**
+
 ```
 Desktop\BurnToastWin.lnk
 ```
 
 **User Data:**
+
 ```
 %LOCALAPPDATA%\BurnToastNotificationStudio\
 └── logs\
@@ -692,64 +778,70 @@ Desktop\BurnToastWin.lnk
 ```
 
 **Registry (Uninstall Info):**
+
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\BurnToastWin_is1
 ```
 
 ### Disk Space Usage
 
-| Component | Size |
-|-----------|------|
-| Installer Download | 73.04 MB |
-| Installed Application | ~200 MB |
-| Log Files (max) | ~5-10 MB |
-| **Total** | **~280 MB** |
+| Component             | Size        |
+| --------------------- | ----------- |
+| Installer Download    | 73.04 MB    |
+| Installed Application | ~200 MB     |
+| Log Files (max)       | ~5-10 MB    |
+| **Total**             | **~280 MB** |
 
 ---
 
-## 🎉 What's New in v2.1.9
+## 🎉 What's New in v2.1.9 {#whats-new-in-v2-1-9}
 
 ### User Experience Improvements
 
 ✅ **App Version Display**
-- Version now shown in UI (top command bar: "v2.1.9")
-- Easy to verify which version you're running
+
+* Version now shown in UI (top command bar: "v2.1.9")
+* Easy to verify which version you're running
 
 ✅ **Status Message Updates**
-- Clear initialization feedback
-- Progress messages: "Loading templates..." → "Loading module capabilities..." → "All modules loaded successfully."
-- Better user experience during startup
+
+* Clear initialization feedback
+* Progress messages: "Loading templates..." → "Loading module capabilities..." → "All modules loaded successfully."
+* Better user experience during startup
 
 ✅ **Enhanced Module Detection**
-- Reliable detection via external PowerShell process
-- ~2 second detection time
-- 21 commands detected consistently
+
+* Reliable detection via external PowerShell process
+* ~2 second detection time
+* 21 commands detected consistently
 
 ### Technical Improvements
 
 ✅ **External PowerShell Execution**
-- Fixed module detection issues
-- Base64-encoded scripts for reliability
-- No quote escaping problems
+
+* Fixed module detection issues
+* Base64-encoded scripts for reliability
+* No quote escaping problems
 
 ✅ **Improved Logging**
-- Logs moved to `%LOCALAPPDATA%` (no permission issues)
-- Better diagnostic information
-- 30-day log retention
+
+* Logs moved to `%LOCALAPPDATA%` (no permission issues)
+* Better diagnostic information
+* 30-day log retention
 
 ### Version History
 
-- **v2.1.9** (Nov 10, 2025) - App version display + status improvements
-- **v2.1.4** (Nov 10, 2025) - External PowerShell process (fixed detection)
-- **v2.1.2** (Nov 10, 2025) - Fixed log permissions
-- **v2.1.1** (Nov 10, 2025) - Fixed installer path
-- **v2.1.0** (Nov 7, 2025) - Initial release
+* **v2.1.9** (Nov 10, 2025) - App version display + status improvements
+* **v2.1.4** (Nov 10, 2025) - External PowerShell process (fixed detection)
+* **v2.1.2** (Nov 10, 2025) - Fixed log permissions
+* **v2.1.1** (Nov 10, 2025) - Fixed installer path
+* **v2.1.0** (Nov 7, 2025) - Initial release
 
 See [CHANGELOG.md](CHANGELOG.md) for complete history.
 
 ---
 
-## 🚀 Next Steps
+## 🚀 Next Steps {#next-steps}
 
 After successful installation:
 
@@ -764,7 +856,7 @@ After successful installation:
 
 ---
 
-## 📄 License
+## 📄 License {#license}
 
 BurnToastWin is distributed under the **MIT License**.
 
@@ -772,6 +864,6 @@ See [LICENSE](LICENSE) file for details.
 
 ---
 
-**Installation Guide Version:** 2.1.9  
-**Last Updated:** November 10, 2025  
+**Installation Guide Version:** 2.1.9
+**Last Updated:** November 10, 2025
 **Installer:** BurnToastWin-Setup-2.1.9.exe (73.04 MB)
