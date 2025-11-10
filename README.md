@@ -75,7 +75,7 @@ For detailed installation instructions, see [INSTALLATION.md](INSTALLATION.md).
 
 **No custom formats, no presets, no translation layer** - just pure BurntToast commands ready to use.
 
-## 🎯 Why BurnToastWin?
+## 🎯 Why BurnToast Notification Studio?
 
 ✅ **100% Feature Coverage** - All BurntToast parameters supported  
 ✅ **Test before deploying** - See exactly how notifications look  
@@ -133,51 +133,6 @@ See [ENTERPRISE_IMPLEMENTATION_SUMMARY.md](ENTERPRISE_IMPLEMENTATION_SUMMARY.md)
 
 **Optional:**
 - Windows Terminal (for better PowerShell experience)
-
----
-
-### For Developers (Building from Source)
-
-**Required Development Tools:**
-
-1. **[.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)** or later
-   ```powershell
-   dotnet --version  # Verify installation (should show 8.0.x or higher)
-   ```
-
-2. **Windows Desktop Workloads** for .NET
-   ```powershell
-   dotnet workload install microsoft-net-sdk-windowsdesktop
-   ```
-
-3. **Visual Studio 2022** (17.8 or later) **OR** **VS Code** with C# extension
-   - **Visual Studio Community Edition** is sufficient (free)
-   - Required workload: **.NET desktop development**
-   - Or use **VS Code** with:
-     - C# extension (ms-dotnettools.csharp)
-     - C# Dev Kit (ms-dotnettools.csdevkit)
-
-4. **Git** for version control
-   ```powershell
-   git --version  # Verify installation
-   ```
-
-5. **BurntToast PowerShell Module** (v0.8.5+)
-   ```powershell
-   Install-Module -Name BurntToast -Scope CurrentUser -Force
-   ```
-
-**Build Tool Requirements:**
-
-- **Inno Setup 6.x** (for creating installer packages)
-  - Download from: https://jrsoftware.org/isinfo.php
-  - Install to default location: `C:\Program Files (x86)\Inno Setup 6\`
-  - Required only for creating installer (not for development/testing)
-
-**Development System Requirements:**
-- **Disk Space**: ~2 GB (SDK + dependencies + build artifacts + NuGet cache)
-- **Memory**: 8 GB RAM minimum, 16 GB recommended for optimal build performance
-- **Network**: Internet connection required for NuGet package restore
 
 ---
 
