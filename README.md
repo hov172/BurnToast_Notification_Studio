@@ -82,7 +82,6 @@ For detailed installation instructions, see [INSTALLATION.md](INSTALLATION.md).
 ✅ **Discover features** - Explore all 80+ BurntToast capabilities  
 ✅ **Advanced Features** - Interactive elements, columns, data binding  
 ✅ **Save time** - No need to lookup parameter syntax  
-✅ **Avoid errors** - GUI validates inputs automatically  
 ✅ **Learn PowerShell** - See generated commands and understand the syntax  
 
 ## 🎉 Version 2.0 - Enterprise Edition
@@ -198,20 +197,6 @@ The following NuGet packages are automatically restored during build:
    ```powershell
    $env:BURNTOAST_ENVIRONMENT = "Development"
    ```
-
-## Build & Run
-
-```powershell
-# from the repo root on Windows
-dotnet build BurnToastWin.sln
-
-# run tests
-dotnet test
-
-# run application
-cd src/BurnToastWin.App
-dotnet run
-```
 
 ## Usage
 
@@ -561,20 +546,6 @@ Log format:
 2025-11-07 14:23:48.012 -08:00 [INF] Command copied to clipboard
 ```
 
-## Testing
-
-Run the comprehensive test suite:
-
-```powershell
-# Run all tests
-dotnet test
-
-# Run with detailed output
-dotnet test --logger "console;verbosity=detailed"
-
-# Run with code coverage
-dotnet test --collect:"XPlat Code Coverage"
-
 # Results: 28 tests, 100% passing ✅
 ```
 
@@ -595,13 +566,7 @@ See [azure-pipelines.yml](azure-pipelines.yml) for configuration.
 
 ## Documentation
 
-- **[POWERSHELL-CLI.md](POWERSHELL-CLI.md)** - Command-line integration patterns and real-world examples
-- **[FEATURE_VERIFICATION.md](FEATURE_VERIFICATION.md)** - Complete mapping of UI features to BurntToast module
-- **[ENTERPRISE_IMPLEMENTATION_SUMMARY.md](ENTERPRISE_IMPLEMENTATION_SUMMARY.md)** - Technical implementation details
-- **[Developer Guide](docs/DeveloperGuide.md)** - Architecture, development workflow, API reference
-- **[CHANGELOG.md](CHANGELOG.md)** - Version history following semantic versioning
-- **Inline XML Docs** - All public APIs have comprehensive XML documentation
-
+- Coming Soon
 ## Use Cases
 
 ### For Developers
@@ -630,24 +595,6 @@ See [azure-pipelines.yml](azure-pipelines.yml) for configuration.
 - ✅ One-click command generation
 - ✅ Copy to clipboard functionality
 
-### Phase 2: Enhanced Usability (Planned)
-- 📋 Command history with search
-- 📋 Favorite/bookmark common configurations
-- 📋 Export/import configurations
-- 📋 Command templates library
-
-### Phase 3: Advanced Integration (Planned)
-- 📋 GitHub Actions integration examples
-- 📋 Azure DevOps extension
-- 📋 PowerShell module wrapper
-- 📋 REST API for remote notifications
-
-### Phase 4: Enterprise Features (Planned)
-- 📋 Team configuration sharing
-- 📋 Central notification management
-- 📋 Analytics and reporting
-- 📋 Azure AD authentication
-
 ## Contributing
 
 We welcome contributions! Here's how to get started:
@@ -662,73 +609,9 @@ Found a bug or have a feature request?
    - Expected vs actual behavior
    - Screenshots if applicable
    - Log files from `%LOCALAPPDATA%\BurnToastNotificationStudio\logs\`
-   - System information (Windows version, .NET version, BurntToast version)
-
-### 🔧 Contributing Code
-
-1. **Fork the repository** on GitHub
-2. **Clone your fork** locally:
-   ```powershell
-   git clone https://github.com/YOUR-USERNAME/BurnToast_Notification_Studio.git
-   cd BurnToast_Notification_Studio
-   ```
-3. **Create a feature branch**:
-   ```powershell
-   git checkout -b feature/amazing-feature
-   ```
-4. **Make your changes** following our guidelines below
-5. **Test thoroughly** - Run all unit tests and test the app manually
-6. **Commit your changes** using semantic commit messages:
-   ```powershell
-   git commit -m "feat: add command templates feature"
-   git commit -m "fix: resolve module detection timeout"
-   git commit -m "docs: update installation guide"
-   ```
-7. **Push to your fork**:
-   ```powershell
-   git push origin feature/amazing-feature
-   ```
-8. **Open a Pull Request** with:
-   - Clear description of changes
-   - Reference to related issues
-   - Screenshots/GIFs for UI changes
-   - Test results
+   - System information (Windows version, .NET version, BurntToast version
 
 ### 📋 Development Guidelines
-
-**Code Style:**
-- Follow MVVM pattern for UI code
-- Use dependency injection for services
-- Add XML documentation for public APIs
-- Use meaningful variable/method names
-- Keep methods focused and small (<50 lines ideal)
-
-**Testing:**
-- Add unit tests for new features
-- Maintain 100% test passing rate
-- Use xUnit, Moq, and FluentAssertions
-- Test edge cases and error conditions
-
-**Commit Messages:**
-Follow [Conventional Commits](https://www.conventionalcommits.org/):
-- `feat:` - New feature
-- `fix:` - Bug fix
-- `docs:` - Documentation changes
-- `test:` - Adding or updating tests
-- `refactor:` - Code refactoring
-- `perf:` - Performance improvements
-- `chore:` - Maintenance tasks
-
-**Pull Request Checklist:**
-- [ ] Code follows project style guidelines
-- [ ] All tests pass (`dotnet test`)
-- [ ] New features have unit tests
-- [ ] Documentation updated (README, code comments)
-- [ ] No build warnings
-- [ ] Tested on Windows 10 and/or Windows 11
-- [ ] Changelog updated (if user-facing change)
-
-See [docs/DeveloperGuide.md](docs/DeveloperGuide.md) for comprehensive development documentation.
 
 ---
 
