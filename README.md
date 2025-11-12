@@ -444,11 +444,7 @@ Explore **all 80+ BurntToast parameters** in the app with **100% module parity**
 
 ### 📚 Additional Documentation
 
-- [POWERSHELL-CLI.md](POWERSHELL-CLI.md) - Command-line usage examples
-- [FEATURE_VERIFICATION.md](FEATURE_VERIFICATION.md) - Complete feature mapping (100% coverage)
-- [ENTERPRISE_IMPLEMENTATION_SUMMARY.md](ENTERPRISE_IMPLEMENTATION_SUMMARY.md) - Technical details
-- [CHANGELOG.md](CHANGELOG.md) - Version history and updates
-
+- Coming Soon
 ## 🎯 100% Module Parity
 
 BurnToastWin achieves **complete feature parity** with the BurntToast PowerShell module:
