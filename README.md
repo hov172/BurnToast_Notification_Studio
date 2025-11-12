@@ -5,6 +5,8 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Windows](https://img.shields.io/badge/platform-Windows%2010%2B-0078D6.svg)](https://www.microsoft.com/windows)
 
+**Still in Beta**
+
 A visual notification designer and testing tool for the [BurntToast](https://github.com/Windos/BurntToast) PowerShell module. Design notifications with a modern GUI, test them instantly, then copy the PowerShell command to use in your scripts!
 
 <img width="1089" height="687" alt="BurnToastStudio" src="https://github.com/user-attachments/assets/21aa4a8f-e81b-4a0f-b6a0-0b8d1e541462" />
