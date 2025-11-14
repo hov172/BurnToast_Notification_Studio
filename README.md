@@ -32,15 +32,14 @@ A visual notification designer and testing tool for the [BurntToast](https://git
 
 ### Installation
 
-**Download the installer:** [`BurnToastWin-Setup-2.1.10.exe`](installer/output/BurnToastWin-Setup-2.1.10.exe) (73.04 MB)
+**Download the installer:** [`BurnToastWin-Setup-2.1.11.exe`](installer/output/BurnToastWin-Setup-2.1.11.exe) (73 MB)
 
 **Latest Update (November 14, 2025):**
+- ✅ Added image alignment support (Default, Stretch, Left, Center, Right) for Hero Image and App Logo (v2.1.11)
+- ✅ Complete image parameter support - all 9 New-BTImage parameters now implemented
+- ✅ New image styling UI controls in Advanced Options
 - ✅ Fixed sound parameter bug with alarm and call sounds (v2.1.10)
-- ✅ Corrected sound names to match BurntToast ValidateSet (Alarm, Alarm2-10, Call, Call2-10)
-- ✅ Removed incorrect "Looping." prefix that caused validation errors
-- ✅ All 27 notification sounds now working correctly
-- ✅ App version displays in UI
-- ✅ Module detection stable (21 commands detected)
+- ✅ All 25 notification sounds working correctly
 
 Run the installer and follow the setup wizard. The installer will:
 - ✓ Install BurnToastWin to `C:\Program Files\BurnToast Notification Studio`
@@ -55,6 +54,7 @@ For detailed installation instructions, see [INSTALLATION.md](INSTALLATION.md).
 ```powershell
 .\BurnToastWin-Setup-2.1.10.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
 ```
+
 
 ```
 
