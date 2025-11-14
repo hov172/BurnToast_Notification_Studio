@@ -9,7 +9,8 @@
 
 A visual notification designer and testing tool for the [BurntToast](https://github.com/Windos/BurntToast) PowerShell module. Design notifications with a modern GUI, test them instantly, then copy the PowerShell command to use in your scripts!
 
-<img width="1089" height="687" alt="BurnToastStudio" src="https://github.com/user-attachments/assets/21aa4a8f-e81b-4a0f-b6a0-0b8d1e541462" />
+<img width="1094" height="697" alt="BurnToastStudio" src="https://github.com/user-attachments/assets/177d5b12-88c1-4f3b-a31d-0d082b51ae79" />
+
 
 ## 📑 Table of Contents
 
