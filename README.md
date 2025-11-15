@@ -157,19 +157,6 @@ graph LR
 
 ---
 
-## 🎉 Version 2.0 - Enterprise Edition
-
-> **BurnToastWin is now enterprise-ready!** This release includes comprehensive improvements:
-
-✅ **Dependency Injection** - Microsoft.Extensions.Hosting with proper service lifetime management  
-✅ **Structured Logging** - Serilog with file rotation (30-day retention)  
-✅ **Security Hardening** - Input validation, PowerShell injection prevention, sanitization  
-✅ **Resilience** - Polly retry policies with exponential backoff, circuit breaker, timeout protection  
-✅ **Performance** - PowerShell runspace pooling (10x faster), memory leak fixes  
-✅ **Testing** - 28 unit tests with xUnit, Moq, FluentAssertions (100% passing)  
-✅ **CI/CD** - Azure DevOps pipeline with automated build/test/deploy  
-✅ **Documentation** - Comprehensive developer guide, changelog, API docs  
-
 ### Performance Improvements
 - **75% faster** notification sends (2s → 0.5s)
 - **25% lower** memory usage (200MB → 150MB)
@@ -317,26 +304,6 @@ The following NuGet packages are automatically restored during build:
    ```powershell
    $env:BURNTOAST_ENVIRONMENT = "Development"
    ```
-
-## 🔨 Build & Run
-
-```powershell
-# Clone the repository
-git clone https://github.com/hov172/BurnToast_Notification_Studio.git
-cd BurnToast_Notification_Studio
-
-# Build the solution
-dotnet build BurnToastWin.sln
-
-# Run tests
-dotnet test
-
-# Run the application
-cd src/BurnToastWin.App
-dotnet run
-```
-
----
 
 ## 📖 Usage
 
@@ -547,12 +514,6 @@ Explore **all 80+ BurntToast parameters** in the app with **100% module parity**
 - Column weights and text stacking
 - Multiple progress bars in arrays
 
-**Advanced System Features (Phase 5) Tab:**
-- ToastPeople for person associations
-- Custom audio files with loop support
-- Advanced binding configurations
-- Visual customization
-- Submit methods
 
 ### 💡 Pro Tips
 
@@ -678,19 +639,6 @@ Log format:
 2025-11-07 14:23:46.456 -08:00 [INF] Detecting module capabilities...
 2025-11-07 14:23:47.789 -08:00 [INF] Generated PowerShell command
 2025-11-07 14:23:48.012 -08:00 [INF] Command copied to clipboard
-```
-
----
-
-## 🔄 CI/CD Pipeline
-
-The project includes a complete Azure DevOps pipeline (`azure-pipelines.yml`):
-
-- **Build Stage**: Restore, build, test, code coverage
-- **Deploy Development**: Auto-deploy on `develop` branch
-- **Deploy Production**: Auto-deploy on `main` branch with manual approval
-
-See [azure-pipelines.yml](azure-pipelines.yml) for configuration.
 
 ---
 
@@ -746,9 +694,6 @@ Found a bug or have a feature request?
 ### Summary
 You are free to:
 - ✅ Use this software for commercial purposes with Credit
-- ✅ Modify and distribute the software
-- ✅ Use this software privately
-
 Under the conditions that:
 - 📄 You include the license and copyright notice
 - ⚖️ This software is provided "as-is" without warranty
@@ -771,8 +716,6 @@ This project uses the following open-source libraries, each under their respecti
 | [System.Management.Automation](https://github.com/PowerShell/PowerShell) | MIT | PowerShell integration |
 
 All third-party licenses are compatible with the MIT License of this project.
-
----
 
 ---
 
@@ -809,11 +752,9 @@ Found a problem? Report it on our [Issue Tracker](https://github.com/hov172/Burn
 
 ---
 
----
-
 ## 🙏 Acknowledgments
 
-**Special thanks to the amazing open-source projects that made this possible:**
+**Special thanks to the amazing BurnToast Module open-source projects that made this possible:**
 
 - **[BurntToast](https://github.com/Windos/BurntToast)** by [@Windos](https://github.com/Windos) - The excellent PowerShell module this tool wraps
 - **[ModernWPF](https://github.com/Kinnara/ModernWpf)** by [@Kinnara](https://github.com/Kinnara) - Modern WPF UI library
@@ -823,8 +764,6 @@ Found a problem? Report it on our [Issue Tracker](https://github.com/hov172/Burn
 - **[FluentValidation](https://github.com/FluentValidation/FluentValidation)** - Validation library
 
 And to all contributors who have helped improve this project! 🙏
-
----
 
 ---
 
