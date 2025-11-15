@@ -1,10 +1,10 @@
 # 📦 BurnToast Notification Studio Installation Guide
 
-[![Version](https://img.shields.io/badge/version-2.1.11-blue.svg)](https://github.com/hov172/BurnToast_Notification_Studio/releases)
+[![Version](https://img.shields.io/badge/version-2.1.12-blue.svg)](https://github.com/hov172/BurnToast_Notification_Studio/releases)
 [![Windows](https://img.shields.io/badge/platform-Windows%2010%2B-0078D6.svg)](https://www.microsoft.com/windows)
-[![Installer Size](https://img.shields.io/badge/size-73.05%20MB-green.svg)](installer/output/BurnToastWin-Setup-2.1.11.exe)
+[![Installer Size](https://img.shields.io/badge/size-73.05%20MB-green.svg)](installer/output/BurnToastWin-Setup-2.1.12.exe)
 
-**Latest Release:** v2.1.11 (November 14, 2025)
+**Latest Release:** v2.1.12 (November 14, 2025)
 **Latest Changes:** Added image alignment support and complete New-BTImage parameter compatibility
 
 ---
@@ -26,7 +26,7 @@
 
 ### One-Minute Setup
 
-1. **Download:** [`BurnToastWin-Setup-2.1.11.exe`](installer/output/BurnToastWin-Setup-2.1.11.exe) (73.05 MB)
+1. **Download:** [`BurnToastWin-Setup-2.1.12.exe`](installer/output/BurnToastWin-Setup-2.1.12.exe) (73.05 MB)
 2. **Run:** Double-click the installer
 3. **Install:** Follow the wizard (takes ~30 seconds)
 4. **Launch:** Start Menu → BurnToastWin
@@ -86,14 +86,14 @@
 1. **Download the Installer**
 
    ```
-   File: BurnToastWin-Setup-2.1.11.exe
+   File: BurnToastWin-Setup-2.1.12.exe
    Size: 73.05 MB (76,574,720 bytes)
-   Location: installer/output/BurnToastWin-Setup-2.1.11.exe
+   Location: installer/output/BurnToastWin-Setup-2.1.12.exe
    ```
 
 2. **Run the Installer**
 
-   * Double-click `BurnToastWin-Setup-2.1.11.exe`
+   * Double-click `BurnToastWin-Setup-2.1.12.exe`
    * If prompted, click "Yes" to allow admin access
 
 3. **Setup Wizard**
@@ -135,26 +135,29 @@ For automated deployments, scripts, or enterprise environments:
 
 ```powershell
 # Completely silent with no UI
-.\BurnToastWin-Setup-2.1.11.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
+**Silent Installation:**
+```powershell
+.\BurnToastWin-Setup-2.1.12.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
+```
 ```
 
 **Advanced Options:**
 
 ```powershell
 # Silent install with custom directory
-.\BurnToastWin-Setup-2.1.11.exe /VERYSILENT /DIR="C:\MyApps\BurnToastWin" /NORESTART
+.\BurnToastWin-Setup-2.1.12.exe /VERYSILENT /DIR="C:\MyApps\BurnToastWin" /NORESTART
 
 # Silent install with log file
-.\BurnToastWin-Setup-2.1.11.exe /VERYSILENT /LOG="C:\Logs\BurnToastWin-Install.log" /NORESTART
+.\BurnToastWin-Setup-2.1.12.exe /VERYSILENT /LOG="C:\Logs\BurnToastWin-Install.log" /NORESTART
 
 # Silent install WITHOUT BurntToast module
-.\BurnToastWin-Setup-2.1.11.exe /VERYSILENT /TASKS="!installmodule" /NORESTART
+.\BurnToastWin-Setup-2.1.12.exe /VERYSILENT /TASKS="!installmodule" /NORESTART
 
 # Silent install WITHOUT desktop icon
-.\BurnToastWin-Setup-2.1.11.exe /VERYSILENT /TASKS="!desktopicon" /NORESTART
+.\BurnToastWin-Setup-2.1.12.exe /VERYSILENT /TASKS="!desktopicon" /NORESTART
 
 # Silent install with only specific tasks
-.\BurnToastWin-Setup-2.1.11.exe /VERYSILENT /TASKS="desktopicon,installmodule" /NORESTART
+.\BurnToastWin-Setup-2.1.12.exe /VERYSILENT /TASKS="desktopicon,installmodule" /NORESTART
 ```
 
 **Command-Line Parameters:**
@@ -188,7 +191,7 @@ For automated deployments, scripts, or enterprise environments:
 
 ```powershell
 # Example SCCM installation command
-msiexec /i "BurnToastWin-Setup-2.1.11.exe" /qn /norestart /l*v "C:\Logs\BurnToastWin.log"
+msiexec /i "BurnToastWin-Setup-2.1.12.exe" /qn /norestart /l*v "C:\Logs\BurnToastWin.log"
 ```
 
 ---
@@ -338,7 +341,7 @@ When BurnToastWin launches, check the UI:
 
 **Top Command Bar:**
 
-* ✅ Should show: **"v2.1.11"** (app version)
+* ✅ Should show: **"v2.1.12"** (app version)
 
 **Status Bar (bottom):**
 
@@ -396,7 +399,7 @@ When BurnToastWin launches, check the UI:
 
 **In the app:**
 
-* Look at top command bar → Should show **"v2.1.11"**
+* Look at top command bar → Should show **"v2.1.12"
 
 **Via file properties:**
 
@@ -407,7 +410,7 @@ When BurnToastWin launches, check the UI:
 ### Verification Checklist
 
 * [ ] App launches without errors
-* [ ] App version shows "v2.1.11" in UI
+* [ ] App version shows "v2.1.12" in UI
 * [ ] Module version detected (e.g., "BurntToast v1.1.0")
 * [ ] 21 commands detected
 * [ ] Status shows "All modules loaded successfully."
@@ -548,7 +551,7 @@ Remove-Item "$env:LOCALAPPDATA\BurnToastNotificationStudio" -Recurse -Force
 **Solution 2: Use Silent Install to User Directory**
 
 ```powershell
-.\BurnToastWin-Setup-2.1.11.exe /VERYSILENT /DIR="C:\Users\$env:USERNAME\Apps\BurnToastWin" /NORESTART
+.\BurnToastWin-Setup-2.1.12.exe /VERYSILENT /DIR="C:\Users\$env:USERNAME\Apps\BurnToastWin" /NORESTART
 ```
 
 **Solution 3: Use Portable Installation**
@@ -601,7 +604,7 @@ Get-ChildItem $logPath -Filter "*.log" | Sort-Object LastWriteTime -Descending |
 & "C:\Program Files\BurnToast Notification Studio\unins000.exe" /VERYSILENT
 
 # Reinstall
-.\BurnToastWin-Setup-2.1.11.exe /VERYSILENT /NORESTART
+.\BurnToastWin-Setup-2.1.12.exe /VERYSILENT /NORESTART
 ```
 
 ---
@@ -708,7 +711,7 @@ If this doesn't work, issue is with BurntToast module, not BurnToastWin.
 
 **When reporting issues, include:**
 
-1. BurnToastWin version (shown in app: v2.1.11)
+1. BurnToastWin version (shown in app: v2.1.12)
 2. Windows version (run `winver`)
 3. BurntToast module version (run `Get-Module BurntToast -ListAvailable`)
 4. Error message or unexpected behavior
@@ -729,7 +732,7 @@ If this doesn't work, issue is with BurntToast module, not BurnToastWin.
 **Installer Information:**
 
 ```
-File: BurnToastWin-Setup-2.1.11.exe
+File: BurnToastWin-Setup-2.1.12.exe
 Size: 73.05 MB (76,574,720 bytes)
 Compression: LZMA2/ultra (best compression)
 Architecture: x64 only
@@ -794,7 +797,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\BurnToast
 
 ---
 
-## 🎉 What's New in v2.1.11 {#whats-new-in-v2-1-11}
+## 🎉 What's New in v2.1.12 {#whats-new-in-v2-1-12}
 
 ### New Features
 
@@ -830,6 +833,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\BurnToast
 
 ### Version History
 
+* **v2.1.12** (Nov 14, 2025) - Command parser with syntax validation + bidirectional workflow
 * **v2.1.11** (Nov 14, 2025) - Image alignment + complete New-BTImage compatibility
 * **v2.1.10** (Nov 14, 2025) - Fixed sound parameter validation
 * **v2.1.11** (Nov 10, 2025) - App version display + status improvements
@@ -865,7 +869,7 @@ See [LICENSE](LICENSE) file for details.
 
 ---
 
-**Installation Guide Version:** 2.1.11
+**Installation Guide Version:** 2.1.12
 **Last Updated:** November 10, 2025
-**Installer:** BurnToastWin-Setup-2.1.11.exe (73.05 MB)
+**Installer:** BurnToastWin-Setup-2.1.12.exe (73.05 MB)
 
