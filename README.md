@@ -1,16 +1,27 @@
-# BurnToast Notification Studio
+# 🔔 BurnToast Notification Studio
 
-[![Version](https://img.shields.io/badge/version-2.1.9-blue.svg)](https://github.com/hov172/BurnToast_Notification_Studio/releases)
+<div align="center">
+
+[![Version](https://img.shields.io/badge/version-2.1.12-blue.svg)](https://github.com/hov172/BurnToast_Notification_Studio/releases)
 [![.NET](https://img.shields.io/badge/.NET-8.0-512BD4.svg)](https://dotnet.microsoft.com/download/dotnet/8.0)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Windows](https://img.shields.io/badge/platform-Windows%2010%2B-0078D6.svg)](https://www.microsoft.com/windows)
 
-**Still in Beta**
+**A visual notification designer and testing tool for the [BurntToast](https://github.com/Windos/BurntToast) PowerShell module.**
 
-A visual notification designer and testing tool for the [BurntToast](https://github.com/Windos/BurntToast) PowerShell module. Design notifications with a modern GUI, test them instantly, then copy the PowerShell command to use in your scripts!
+*Design notifications with a modern GUI, test them instantly, then copy the PowerShell command to use in your scripts!*
 
-<img width="1094" height="697" alt="BurnToastStudio" src="https://github.com/user-attachments/assets/177d5b12-88c1-4f3b-a31d-0d082b51ae79" />
+[Download](#-quick-start) • [Features](#-key-features) • [Examples](#real-world-examples)
 
+</div>
+
+---
+
+<div align="center">
+ <img width="1229" height="826" alt="BurnToastStudio" src="https://github.com/user-attachments/assets/99fd0605-9e5e-4d77-801e-3823b730b5c9" />
+</div>
+
+---
 
 ## 📑 Table of Contents
 
@@ -24,42 +35,52 @@ A visual notification designer and testing tool for the [BurntToast](https://git
 - [100% Module Parity](#-100-module-parity)
 - [Architecture](#architecture-highlights)
 - [Testing](#testing)
-- [Documentation](#documentation)
 - [Contributing](#contributing)
-- [License](#license)
 - [Support](#support)
 
 ## 📦 Quick Start
 
-### Installation
+### 💾 Installation
 
-**Download the installer:** [`BurnToastWin-Setup-2.1.11.exe`](installer/output/BurnToastWin-Setup-2.1.11.exe) (73 MB)
+> **📥 [Download BurnToastWin-Setup-2.1.12.exe](installer/output/BurnToastWin-Setup-2.1.12.exe)** (73 MB)
 
-**Latest Update (November 14, 2025):**
-- ✅ Added image alignment support (Default, Stretch, Left, Center, Right) for Hero Image and App Logo (v2.1.11)
-- ✅ Complete image parameter support - all 9 New-BTImage parameters now implemented
-- ✅ New image styling UI controls in Advanced Options
+### 🎉 What's New in v2.1.12 (November 14, 2025)
+
+#### 🆕 PowerShell Command Import - Bidirectional Workflow
+- **Import commands** - Paste any `New-BurntToastNotification` command to auto-fill the form
+- **Syntax validation** - Detects incomplete commands, unclosed quotes, and mismatched parentheses
+- **Professional UI** - Reorganized PowerShell Integration section with clear Import/Export separation
+- **Perfect for** - Learning, script migration, debugging, and command validation
+
+#### Recent Updates
+- ✅ Image alignment support (v2.1.11) - Default, Stretch, Left, Center, Right for Hero Image and App Logo
+- ✅ Complete New-BTImage parameter support - All 9 parameters implemented
+- ✅ 100% parameter compatibility with BurntToast module verified
 - ✅ Fixed sound parameter bug with alarm and call sounds (v2.1.10)
-- ✅ All 25 notification sounds working correctly
 
-Run the installer and follow the setup wizard. The installer will:
-- ✓ Install BurnToastWin to `C:\Program Files\BurnToast Notification Studio`
-- ✓ Create Start Menu shortcuts
-- ✓ Optionally install BurntToast PowerShell module
-- ✓ Optionally create desktop icon
-- ✓ Configure module path discovery for user and system locations
+Run the installer and follow the setup wizard. 
 
-For detailed installation instructions, see [INSTALLATION.md](INSTALLATION.md).
+**The installer will:**
+- ✅ Install BurnToastWin to `C:\Program Files\BurnToast Notification Studio`
+- ✅ Create Start Menu shortcuts
+- ✅ Optionally install BurntToast PowerShell module
+- ✅ Optionally create desktop icon
+- ✅ Configure module path discovery for user and system locations
 
-**Silent Installation:**
+> 📖 For detailed installation instructions, see **[INSTALLATION.md](INSTALLATION.md)**
+
+#### Silent Installation
 ```powershell
-.\BurnToastWin-Setup-2.1.10.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
+.\BurnToastWin-Setup-2.1.12.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
 ```
 
-
-```
+---
 
 ## ✨ Key Features
+
+<table>
+<tr>
+<td width="50%">
 
 ### 🎨 Visual Notification Designer
 - Configure **all 80+ BurntToast parameters** through an intuitive GUI
@@ -67,32 +88,78 @@ For detailed installation instructions, see [INSTALLATION.md](INSTALLATION.md).
 - Instant preview - click "Send Notification" to test your design
 - Modern WPF interface with light/dark theme support
 
+</td>
+<td width="50%">
+
 ### 📋 PowerShell Command Generation
-- **One-click copy** - Generate exact `New-BurntToastNotification` commands
+- **Bidirectional workflow** ⟷ Generate commands from GUI, import commands to GUI
+- **Import from command** - Paste commands to auto-fill form
+- **Syntax validation** - Detects errors before parsing
+- **One-click copy** - Generate exact commands
 - **Zero translation** - Commands work anywhere BurntToast is installed
-- **Module-compatible** - Stay aligned with BurntToast module updates
-- **Advanced features** - Supports inputs, context menus, columns, data binding, and more
+
+</td>
+</tr>
+</table>
 
 ### 🚀 Recommended Workflow
-1. **Design** - Configure notification in GUI with visual feedback
-2. **Test** - Click "Send Notification" to preview
-3. **Generate** - Click "Generate" to create PowerShell command
-4. **Copy** - Click "Copy to Clipboard" and paste into your scripts!
 
-**No custom formats, no presets, no translation layer** - just pure BurntToast commands ready to use.
+```mermaid
+graph LR
+    A[1. Design] --> B[2. Test]
+    B --> C[3. Generate]
+    C --> D[4. Copy]
+    D --> E[5. Use in Scripts]
+    E -.->|Import| A
+```
 
-## 🎯 Why BurnToast Notification Studio?
+1. **🎨 Design** - Configure notification in GUI with visual feedback
+2. **🔍 Test** - Click "Send Notification" to preview
+3. **⚡ Generate** - Click "Generate" to create PowerShell command
+4. **📋 Copy** - Click "Copy to Clipboard" and paste into your scripts
+5. **🔄 Import** - Paste existing commands to modify and regenerate
+6. **✅ Validate** - Automatic syntax checking with helpful error messages
 
-✅ **100% Feature Coverage** - All BurntToast parameters supported  
-✅ **Test before deploying** - See exactly how notifications look  
-✅ **Discover features** - Explore all 80+ BurntToast capabilities  
-✅ **Advanced Features** - Interactive elements, columns, data binding  
-✅ **Save time** - No need to lookup parameter syntax  
-✅ **Learn PowerShell** - See generated commands and understand the syntax  
+> **No custom formats, no presets, no translation layer** - just pure BurntToast commands ready to use.
+
+## 🎯 Why BurnToastWin?
+
+<table>
+<tr>
+<td>✅ <b>100% Feature Coverage</b></td>
+<td>All BurntToast parameters supported</td>
+</tr>
+<tr>
+<td>✅ <b>Test before deploying</b></td>
+<td>See exactly how notifications look</td>
+</tr>
+<tr>
+<td>✅ <b>Discover features</b></td>
+<td>Explore all 80+ BurntToast capabilities</td>
+</tr>
+<tr>
+<td>✅ <b>Advanced Features</b></td>
+<td>Interactive elements, columns, data binding</td>
+</tr>
+<tr>
+<td>✅ <b>Save time</b></td>
+<td>No need to lookup parameter syntax</td>
+</tr>
+<tr>
+<td>✅ <b>Avoid errors</b></td>
+<td>GUI validates inputs automatically</td>
+</tr>
+<tr>
+<td>✅ <b>Learn PowerShell</b></td>
+<td>See generated commands and understand the syntax</td>
+</tr>
+</table>  
+
+---
 
 ## 🎉 Version 2.0 - Enterprise Edition
 
-**BurnToast Notification Studio is now enterprise-ready!** This release includes comprehensive improvements:
+> **BurnToastWin is now enterprise-ready!** This release includes comprehensive improvements:
 
 ✅ **Dependency Injection** - Microsoft.Extensions.Hosting with proper service lifetime management  
 ✅ **Structured Logging** - Serilog with file rotation (30-day retention)  
@@ -117,9 +184,11 @@ For detailed installation instructions, see [INSTALLATION.md](INSTALLATION.md).
 
 See [ENTERPRISE_IMPLEMENTATION_SUMMARY.md](ENTERPRISE_IMPLEMENTATION_SUMMARY.md) for complete details.
 
-## Requirements
+---
 
-### For End Users (Running the Application)
+## 📋 Requirements
+
+### 👤 For End Users (Running the Application)
 
 **System Requirements:**
 - **Operating System**: Windows 10 (Build 19041 / version 2004 or later) or Windows 11
@@ -138,6 +207,51 @@ See [ENTERPRISE_IMPLEMENTATION_SUMMARY.md](ENTERPRISE_IMPLEMENTATION_SUMMARY.md)
 
 **Optional:**
 - Windows Terminal (for better PowerShell experience)
+
+---
+
+### 👨‍💻 For Developers (Building from Source)
+
+**Required Development Tools:**
+
+1. **[.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)** or later
+   ```powershell
+   dotnet --version  # Verify installation (should show 8.0.x or higher)
+   ```
+
+2. **Windows Desktop Workloads** for .NET
+   ```powershell
+   dotnet workload install microsoft-net-sdk-windowsdesktop
+   ```
+
+3. **Visual Studio 2022** (17.8 or later) **OR** **VS Code** with C# extension
+   - **Visual Studio Community Edition** is sufficient (free)
+   - Required workload: **.NET desktop development**
+   - Or use **VS Code** with:
+     - C# extension (ms-dotnettools.csharp)
+     - C# Dev Kit (ms-dotnettools.csdevkit)
+
+4. **Git** for version control
+   ```powershell
+   git --version  # Verify installation
+   ```
+
+5. **BurntToast PowerShell Module** (v0.8.5+)
+   ```powershell
+   Install-Module -Name BurntToast -Scope CurrentUser -Force
+   ```
+
+**Build Tool Requirements:**
+
+- **Inno Setup 6.x** (for creating installer packages)
+  - Download from: https://jrsoftware.org/isinfo.php
+  - Install to default location: `C:\Program Files (x86)\Inno Setup 6\`
+  - Required only for creating installer (not for development/testing)
+
+**Development System Requirements:**
+- **Disk Space**: ~2 GB (SDK + dependencies + build artifacts + NuGet cache)
+- **Memory**: 8 GB RAM minimum, 16 GB recommended for optimal build performance
+- **Network**: Internet connection required for NuGet package restore
 
 ---
 
@@ -184,7 +298,7 @@ The following NuGet packages are automatically restored during build:
 
 ---
 
-## Configure
+## ⚙️ Configuration
 
 1. Update `src/BurnToastWin.App/appsettings.json`:
    ```json
@@ -204,7 +318,27 @@ The following NuGet packages are automatically restored during build:
    $env:BURNTOAST_ENVIRONMENT = "Development"
    ```
 
-## Usage
+## 🔨 Build & Run
+
+```powershell
+# Clone the repository
+git clone https://github.com/hov172/BurnToast_Notification_Studio.git
+cd BurnToast_Notification_Studio
+
+# Build the solution
+dotnet build BurnToastWin.sln
+
+# Run tests
+dotnet test
+
+# Run the application
+cd src/BurnToastWin.App
+dotnet run
+```
+
+---
+
+## 📖 Usage
 
 ### 🎯 Quick Start
 
@@ -433,9 +567,8 @@ Explore **all 80+ BurntToast parameters** in the app with **100% module parity**
 9. **Check Module Version** - Click "Refresh" to ensure you have the latest BurntToast features
 10. **Accessibility** - Always add AlternateText to images for screen reader support
 
-### 📚 Additional Documentation
+---
 
-- Coming Soon
 ## 🎯 100% Module Parity
 
 BurnToastWin achieves **complete feature parity** with the BurntToast PowerShell module:
@@ -458,7 +591,9 @@ BurnToastWin achieves **complete feature parity** with the BurntToast PowerShell
 
 Every implementable BurntToast parameter is fully supported!
 
-## Architecture Highlights
+---
+
+## 🏗️ Architecture Highlights
 
 ### Core Concept: Visual Command Builder
 BurnToastWin is a **visual command builder** for BurntToast. Every UI element directly maps to PowerShell syntax:
@@ -523,16 +658,9 @@ UI Configuration → PowerShell Command → Copy & Use Anywhere
                                             ↓
                                     [Copy to Clipboard]
 ```
+---
 
-### No Translation Layer
-- ❌ No custom file formats
-- ❌ No intermediate serialization
-- ❌ No version-specific code
-- ✅ Direct PowerShell generation
-- ✅ Works with any BurntToast version
-- ✅ Commands work everywhere (scripts, CI/CD, scheduled tasks)
-
-## Viewing Logs
+## 📊 Viewing Logs
 
 Logs are written to `logs/burntoast-YYYYMMDD.log` with automatic daily rotation:
 
@@ -552,15 +680,9 @@ Log format:
 2025-11-07 14:23:48.012 -08:00 [INF] Command copied to clipboard
 ```
 
-# Results: 28 tests, 100% passing ✅
-```
+---
 
-Test coverage includes:
-- **MainViewModel**: 13 tests covering command execution, error handling, disposal
-- **NotificationRequestValidator**: 15 tests for input validation rules
-- **Integration-ready**: Infrastructure for future integration tests
-
-## CI/CD Pipeline
+## 🔄 CI/CD Pipeline
 
 The project includes a complete Azure DevOps pipeline (`azure-pipelines.yml`):
 
@@ -570,10 +692,9 @@ The project includes a complete Azure DevOps pipeline (`azure-pipelines.yml`):
 
 See [azure-pipelines.yml](azure-pipelines.yml) for configuration.
 
-## Documentation
+---
 
-- Coming Soon
-## Use Cases
+## 💼 Use Cases
 
 ### For Developers
 - **Test notifications** before adding to scripts
@@ -593,7 +714,9 @@ See [azure-pipelines.yml](azure-pipelines.yml) for configuration.
 - **Scheduled tasks** - Windows Task Scheduler integration
 - **Monitoring tools** - PRTG, Nagios, Zabbix notification scripts
 
-## Roadmap
+---
+
+## 🗺️ Roadmap
 
 ### Phase 1: Command Generation ✅ (Complete)
 - ✅ All 32+ BurntToast features supported
@@ -601,9 +724,11 @@ See [azure-pipelines.yml](azure-pipelines.yml) for configuration.
 - ✅ One-click command generation
 - ✅ Copy to clipboard functionality
 
-## Contributing
+---
 
-We welcome contributions! Here's how to get started:
+## 🤝 Contributing
+
+**We welcome contributions!** Here's how to get started: open issue
 
 ### 🐛 Reporting Issues
 
@@ -616,21 +741,13 @@ Found a bug or have a feature request?
    - Screenshots if applicable
    - Log files from `%LOCALAPPDATA%\BurnToastNotificationStudio\logs\`
    - System information (Windows version, .NET version, BurntToast version
-
-### 📋 Development Guidelines
-
+     
 ---
-
-## License
-
-This project is licensed under the **MIT License**.
-
 ### Summary
 You are free to:
-- ✅ Use this software for commercial purposes
+- ✅ Use this software for commercial purposes with Credit
 - ✅ Modify and distribute the software
 - ✅ Use this software privately
-- ✅ Include this software in larger projects
 
 Under the conditions that:
 - 📄 You include the license and copyright notice
@@ -657,7 +774,9 @@ All third-party licenses are compatible with the MIT License of this project.
 
 ---
 
-## Support
+---
+
+## 💬 Support
 
 ### 🐛 Issues & Bug Reports
 Found a problem? Report it on our [Issue Tracker](https://github.com/hov172/BurnToast_Notification_Studio/issues).
@@ -674,6 +793,7 @@ Found a problem? Report it on our [Issue Tracker](https://github.com/hov172/Burn
   - BurntToast version (run `Get-Module BurntToast -ListAvailable`)
 
 ### 📚 Documentation
+- **[Installation Guide](INSTALLATION.md)** - Detailed setup instructions
 - **[BurntToast Module Docs](https://github.com/Windos/BurntToast)** - Official module documentation
 
 ### 🔧 Troubleshooting
@@ -689,11 +809,11 @@ Found a problem? Report it on our [Issue Tracker](https://github.com/hov172/Burn
 
 ---
 
+---
 
+## 🙏 Acknowledgments
 
-## Acknowledgments
-
-Special thanks to the amazing open-source projects that made this possible:
+**Special thanks to the amazing open-source projects that made this possible:**
 
 - **[BurntToast](https://github.com/Windos/BurntToast)** by [@Windos](https://github.com/Windos) - The excellent PowerShell module this tool wraps
 - **[ModernWPF](https://github.com/Kinnara/ModernWpf)** by [@Kinnara](https://github.com/Kinnara) - Modern WPF UI library
@@ -706,17 +826,8 @@ And to all contributors who have helped improve this project! 🙏
 
 ---
 
-## 🎉 BurnToastWin v2.1.9 - Enterprise Edition
-
-*Visual notification designer → PowerShell command generator → Production-ready notifications*
+---
 
 **⭐ Star this repo if you find it useful!**
 
----
-
-**Latest Release:** v2.1.9 (November 10, 2025)  
-**Download:** [BurnToastWin-Setup-2.1.9.exe](installer/output/BurnToastWin-Setup-2.1.9.exe) (73.04 MB)  
-**License:** MIT  
-**Platform:** Windows 10 (2004+) / Windows 11
-
----
+*Visual notification designer → PowerShell command generator → Production-ready notifications*
