@@ -6,7 +6,7 @@ BurnToast Notification Studio (BurnToastWin) provides a visual editor for all Bu
 
 <div align="center">
 
-[![Version](https://img.shields.io/badge/version-2.1.12-blue.svg)]()
+[![Version](https://img.shields.io/badge/version-2.2.0-blue.svg)]()
 [![.NET](https://img.shields.io/badge/.NET-8.0-512BD4.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-green.svg)]()
 [![Windows](https://img.shields.io/badge/platform-Windows%2010%2B-0078D6.svg)]()
@@ -16,7 +16,7 @@ BurnToast Notification Studio (BurnToastWin) provides a visual editor for all Bu
 ---
 
 <div align="center">
-  <img width="1229" height="826" alt="BurnToastStudio" src="https://github.com/user-attachments/assets/99fd0605-9e5e-4d77-801e-3823b730b5c9" />
+  <img width="1143" height="1005" alt="BurnToastStudio" src="https://github.com/user-attachments/assets/7af7ed58-f1de-48ee-8fec-16b1590387d4" />
 </div>
 
 ---
@@ -61,14 +61,23 @@ It is built for developers, DevOps engineers, IT administrators, and power users
 
 ## Key Features
 
+### 🎨 Live Mock Preview (NEW in v2.2.0)
+- **Real-time notification preview** - See a mock of how your notification will look before sending
+- **Interactive buttons** - Hover to see action arguments, click to copy to clipboard
+- **Image validation** - Green/red borders indicate valid/invalid image paths
+- **Size indicator** - Shows Compact/Medium/Large based on content
+- **Smooth animations** - Slide-in effects when preview updates
+- **Keyboard shortcut** - Press Ctrl+P to toggle preview on/off
+- **Coming soon Matching Windows UI** - Adding styleing ands fonts to match Windows notifications layout
+
 ### Visual Designer
 - Configure **all 80+ BurntToast parameters** through a clean interface  
-- Real-time toast preview with “Send Notification”  
+- Real-time toast preview with "Send Notification"  
 - Light/Dark theme support  
 
 ### PowerShell Integration
 - **Generate** BurntToast commands from GUI selections  
-- **Import** existing BurntToast commands  
+- **Import** existing BurntToast commands with full button parsing
 - Syntax validation  
 - Output uses true BurntToast syntax  
 
@@ -118,8 +127,6 @@ It is built for developers, DevOps engineers, IT administrators, and power users
 | Windows 11 | ✅ |
 | Windows Server 2019+ | ✅ |
 | ARM64 | ⚠️ Not tested |
-| 32‑bit Windows | ❌ |
-| macOS/Linux | ❌ |
 
 ---
 
@@ -129,7 +136,7 @@ It is built for developers, DevOps engineers, IT administrators, and power users
 
 Download and run:
 
-`BurnToastWin-Setup-2.1.12.exe`
+BurnToastWin-Setup-2.2.0.exe`
 
 The installer:
 
@@ -143,7 +150,7 @@ The installer:
 ### Silent Installation
 
 ```powershell
-.\BurnToastWin-Setup-2.1.12.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
+.\BurnToastWin-Setup-2.2.0.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
 ```
 
 ---
@@ -173,11 +180,15 @@ Example:
 
 ### Basic Workflow
 
-1. Launch  
-2. Design notification  
-3. Click **Send Notification**  
-4. Click **Generate Command**  
-5. Copy → paste into scripts  
+1. Launch the application
+2. **(NEW) Toggle Preview** - Click Preview button or press Ctrl+P to see live preview
+3. Design your notification using the form fields
+4. **(NEW) Watch the preview** - See your notification update in real-time
+5. **(NEW) Validate images** - Check for green borders (valid) or red (invalid)
+6. **(NEW) Test buttons** - Hover to see arguments, click to copy
+7. Click **Send Notification** to test
+8. Click **Generate Command** to get PowerShell code
+9. Copy → paste into scripts or automation workflows  
 
 ### Presets
 
