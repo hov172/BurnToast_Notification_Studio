@@ -1,12 +1,12 @@
 # 🔔 BurnToast Notification Studio
-# Still in beta working on fixing bugs
+
 A Windows desktop application for designing and testing Windows toast notifications using the BurntToast PowerShell module.
 
 BurnToast Notification Studio (BurnToastWin) provides a visual editor for all BurntToast features and generates copy-paste-ready PowerShell commands suitable for scripts, automation workflows, and scheduled tasks.
 
 <div align="center">
 
-[![Version](https://img.shields.io/badge/version-2.2.0-blue.svg)]()
+[![Version](https://img.shields.io/badge/version-2.3.0-blue.svg)]()
 [![.NET](https://img.shields.io/badge/.NET-8.0-512BD4.svg)]()
 [![License](https://img.shields.io/badge/license-MIT-green.svg)]()
 [![Windows](https://img.shields.io/badge/platform-Windows%2010%2B-0078D6.svg)]()
@@ -16,7 +16,7 @@ BurnToast Notification Studio (BurnToastWin) provides a visual editor for all Bu
 ---
 
 <div align="center">
-  <img width="1143" height="1005" alt="BurnToastStudio" src="https://github.com/user-attachments/assets/7af7ed58-f1de-48ee-8fec-16b1590387d4" />
+ <img width="1095" height="699" alt="BurnToastStudio" src="https://github.com/user-attachments/assets/05de47af-10cd-431e-8e26-c95b5a59cf54" />
 </div>
 
 ---
@@ -61,14 +61,16 @@ It is built for developers, DevOps engineers, IT administrators, and power users
 
 ## Key Features
 
-### 🎨 Live Mock Preview (NEW in v2.2.0)
-- **Real-time notification preview** - See a mock of how your notification will look before sending
+### 🎨 Pixel-Perfect Notification Preview (NEW in v2.3.0)
+- **OS-specific styling** - Automatically matches Windows 10 or Windows 11 notification design
+- **Accurate button rendering** - 40px height, proper spacing, matching Windows 11 specifications
+- **Multi-button support** - Fixed parser to correctly extract and display all buttons
 - **Interactive buttons** - Hover to see action arguments, click to copy to clipboard
 - **Image validation** - Green/red borders indicate valid/invalid image paths
 - **Size indicator** - Shows Compact/Medium/Large based on content
 - **Smooth animations** - Slide-in effects when preview updates
 - **Keyboard shortcut** - Press Ctrl+P to toggle preview on/off
-- **Coming soon Matching Windows UI** - Adding styleing ands fonts to match Windows notifications layout
+- **Dynamic theme support** - Preview updates when switching between light and dark themes
 
 ### Visual Designer
 - Configure **all 80+ BurntToast parameters** through a clean interface  
@@ -136,7 +138,7 @@ It is built for developers, DevOps engineers, IT administrators, and power users
 
 Download and run:
 
-BurnToastWin-Setup-2.2.0.exe`
+`BurnToastWin-Setup-2.3.0.exe`
 
 The installer:
 
@@ -150,7 +152,7 @@ The installer:
 ### Silent Installation
 
 ```powershell
-.\BurnToastWin-Setup-2.2.0.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
+.\BurnToastWin-Setup-2.3.0.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART
 ```
 
 ---
