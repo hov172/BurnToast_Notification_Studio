@@ -16,7 +16,7 @@ BurnToast Notification Studio (BurnToastWin) provides a visual editor for all Bu
 ---
 
 <div align="center">
- <img width="1095" height="699" alt="BurnToastStudio" src="https://github.com/user-attachments/assets/05de47af-10cd-431e-8e26-c95b5a59cf54" />
+ <img width="1098" height="695" alt="BurnToastStudio" src="https://github.com/user-attachments/assets/c07b39e0-3cff-4f97-89d8-1fae85bc3d67" />
 </div>
 
 ---
