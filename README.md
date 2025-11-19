@@ -1,5 +1,5 @@
 # 🔔 BurnToast Notification Studio
-
+# Still in beta working on fixing bugs
 A Windows desktop application for designing and testing Windows toast notifications using the BurntToast PowerShell module.
 
 BurnToast Notification Studio (BurnToastWin) provides a visual editor for all BurntToast features and generates copy-paste-ready PowerShell commands suitable for scripts, automation workflows, and scheduled tasks.
